@@ -1,0 +1,1 @@
+ # This is a Requirements file for IDS 706 Mini 1
