@@ -12,7 +12,8 @@ install:
 test: 
 
 lint:
-
+	
+	
 format:
-
+	black *.py
 
