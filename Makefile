@@ -1,22 +1,16 @@
 
-
-all: install test lint format
-
-venv:
-
-activate:
-	source mini1/bin/activate
-
 install:
 	pip install -upgrade pip && pip install -r requirements.txt
 
-test: 
-	pytest
+format:
+	black *.py
 
 lint:
 	pylint --disable=R,C --ignore-patterns=test_.*?py *.py
 	
+test: 
+	python -m pytest -cov=main test_main.py
 
-format:
-	black *.py
+all: install format lint test 
+
 
